@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Basics 1</title>
+    <script type="text/javscript">
+      function basic1(){
+        var x = [];
+        x.push("coding");
+        x.push("dojo");
+        x.push("rocks");
+        x.pop()
+        console.log(x[x.length-1]);
+      }
+      function basic2(){
+        const y = [];
+        y.push(88);
+        //Does not run. Constants cannot be changed.
+      }
+      function basic3(){
+        var z = [9,10,6,5,-1,20,13,2];
+        for(var i = 0; i < z.length; i++){
+          console.log(z[i]);
+        }
+        for (var i = 0; i < z.length - 1; i ++){
+          console.log(z[i]);
+        }
+      }
+
+      function basic4(){
+        var names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso']
+        for(var i = 0; i < names.length; i++){
+          console.log(names[i].length);
+        }
+        for(var i = 0; i < names.length; i++){
+          if(names[i].length == 5){
+            console.log(names[i]);
+          }
+        }
+      }
+
+      function yell(string){
+        console.log(string.toUpperCase())
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Intermediate</title>
+    <script type="text/javascript">
+      function starString(num){
+        if(typeof num !== "number"){
+          return "Error";
+        }
+        else{
+          var stars = "";
+          for(var i = 0; i <= num; i++){
+            stars += "*";
+          }
+          return stars;
+        }
+      }
+      console.log(starString(8));
+
+      function drawStars(arr){
+        if(typeof arr !== "object"){
+          return "Error, not an array";
+        }
+        else{
+          for(var i = 0; i < arr.length; i++){
+            var stars = "";
+            if(typeof arr[i] === "number"){
+              for(var z = 0; z <= arr.length; z++){
+                stars += "*";
+              }
+              console.log(stars);
+            }
+            else{
+              return "Error, not all values in array are integers";
+            }
+          }
+        }
+      }
+
+      function drawStars2(arr){
+        if(typeof arr !== "object"){
+          return "input not of array type";
+        }
+        else{
+          for(var i = 0; i < arr.length; i++){
+            if(typeof arr[i] === "number"){
+              var stars = "";
+              for(var z = 0; z < arr.length; z++){
+                stars += "*";
+              }
+              console.log(stars);
+            }
+            else if(typeof arr[i] === "string"){
+              var letters = "";
+              for(var y = 0; y < arr.length; y++){
+                letter += String((arr[i][0]).toLowerCase())
+              }
+              console.log(letters);
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
