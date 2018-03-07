@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Class 1</title>
+    <script>
+        function Ninja(name) {
+            this.speed = 3;
+            this.strength = 3;
+            this.name = name;
+            this.health = 100;
+            return this;
+        }
+        Ninja.prototype.sayName = function() {
+            console.log("My ninja name is " + this.name + " !");
+            return this;
+        }
+        Ninja.prototype.showStats = function() {
+            console.log('Name: ' + this.name, ' Health ' + this.health, 'Speed: ' + this.speed, 'Strength: ' + this.strength)
+        }
+        Ninja.prototype.drinkSake = function() {
+            this.health += 10;
+            console.log("Yummy! Your ninjas health went up to " + this.health)
+        }
+        Ninja.prototype.punch = function(blueNinja) {
+            if (blueNinja instanceof Ninja) {
+                this.health -= 5;
+                console.log(blueNinja.name + " was punched by " + redNinja.name + " and lost 5 Health!")
+            }
+        }
+        Ninja.prototype.kick = function(redNinja) {
+                if (redNinja instanceof Ninja) {
+                    this.health -= 15;
+                    console.log(redNinja.name + " was kicked by " + blueNinja.name + " and lost 15 health!")
+                }
+            }
+            //const ninja1 = new Ninja('Victor');
+            //ninja1.sayName();
+            //ninja1.showStats();
+            //ninja1.drinkSake();
+        const blueNinja = new Ninja("Goemon");
+        const redNinja = new Ninja("Vegeta");
+        redNinja.punch(blueNinja);
+        blueNinja.showStats();
+        blueNinja.kick(redNinja);
+        redNinja.showStats();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
